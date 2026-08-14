@@ -216,3 +216,38 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===== Data (nặng, sinh ra tự động, không commit) =====
+data/raw/
+data/processed/
+data/enriched/
+
+# Ngoại lệ: giữ lại samples để clone về chạy thử được ngay
+!data/samples/
+!data/samples/**
+
+# ===== Model weights (file .pkl/.onnx thường nặng vài chục-vài trăm MB) =====
+ai_model/model_weights/*.pkl
+ai_model/model_weights/*.onnx
+ai_model/model_weights/*.tflite
+
+# ===== Evaluation results =====
+evaluation/results/
+
+# ===== Python thông thường =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ===== Env / secrets =====
+.env
+
+# ===== Node (nếu control panel dùng React/Vue) =====
+node_modules/
+dashboard/control_panel/build/
+dashboard/control_panel/dist/
+
+# ===== OS/editor junk =====
+.DS_Store
+.vscode/
